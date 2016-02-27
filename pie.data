@@ -1,0 +1,128 @@
+# This file contains data for the generation of matrixes for phylogenetic
+# analysis of Proto-Indo-European; the data express the phonetic value
+# of corresponding phonemes in cognates. For more information, contact me.
+# This file works as a CSV file, but in most systems you will need to strip
+# comments and blank lines; in R, can be read directly when the appropriate
+# arguments of read.table() are set. While the matrix here presented could
+# be used directly (possibly inverting rows and columns), it is intended for
+# the generation of secondary matrices (such as expression of changes by
+# means of binary features after Chomsky & Halle).
+
+# Columns represent the expression of a given phoneme context in
+# Sanskrit, Avestan, Old Church Slavonic, Lithuanian, Armenian, Albanian,
+# Tocharian A, Hittite, Ancient Greek, Latin, Old Irish and Gothic. Each line
+# corresponds to a given context, explained in the comments.
+Skt,Av,OCS,Lith,Arm,Alb,Toch,Hit,Gr,Lat,OIr,Goth
+
+# PIE context 1: amlaut /p/
+# notes: the expression for Hittite is simplified, as it is /p/ only for
+#        word initial position, and not every amlaut; in Gothic, the phoneme
+#        is usually expressed as /f/, being /θ/ only when in amlaut or
+#        directly after stress.
+p,p,p,p,h/∅,p,p,p,p,p,∅,θ
+
+# PIE context 2: V + /p/
+# notes: in Hittite, it is /p/ (as below) only when intervocal; on Gothic,
+#        the evolution is complex and may require new contexts. 
+p,p,p,p,w,p,p,p/pː,p,p,∅,?
+
+# PIE context 3: /b/
+b,b,b,b,p,b,p,p,b,b,b,p
+
+# PIE context 4: amlaut /bʰ/
+bʰ,b,b,b,b,b,p,p,ɸ,f,b,b
+
+# PIE context 5: V + /bʰ/ + V
+bʰ,b,b,b,w,b,p,p,ɸ,p,p,p
+
+# PIE context 6: initial /t/, not followed by e/eː/i/iː
+# notes: check the actual phoneme for Armenian, here given palatalized (which
+#        is probably wrong); on Gothic, this context is similar to context #2
+#        and probably also requires the development of new contexts.
+t,t,t,t,tʲ,t,t,t,t,t,t,?
+
+# PIE context 7: /d/
+d,d,d,d,t,d,ʦ,t,d,d,d,t
+
+# PIE context 8: /d/ + vowel (but not e/eː/i/iː)
+# notes: the only difference to the above context should be Albanian,
+#        expressing into dʰ.
+d,d,d,d,t,dʰ,ʦ,t,d,d,d,t
+
+# PIE context 9: /d/ + e/eː/i/iː
+# notes: the only difference to the above context should be Hittite (however,
+#        it is necessary to check if before /i/ it doesn't become /ʃ/).
+d,d,d,d,t,dʰ,ʦ,dʰ,d,d,d,t
+
+# PIE context 10: /dʰ/ + C
+# notes: the evolution into Latin is far too complex, new contexts should be
+#        written.
+dʰ,d,d,d,d,d,t,t,ɸ,?,d,d
+
+# PIE context 11: V + /dʰ/ + V (but not e/eː/i/iː)
+# notes: the only difference to the above context should be Albanian,
+#        expressing into dʰ as per context #8.
+dʰ,d,d,d,d,dʰ,t,t,ɸ,?,d,d
+
+# PIE context 12: /dʰ/ + e/eː/i/iː
+# notes: the only difference to context #10 above should be Tocharian,
+#        expressing into /ʧ/.
+dʰ,d,d,d,d,d,ʧ,t,ɸ,?,d,d
+
+# PIE context 13: amlaut /kʲ/ (ḱ) not followed by R or e/eː/i
+# notes: in certain circumstances, in Hittite the expression could be
+#        /ku/ (or /kʷ/?) in initial position, and /kː/ when intervocalic.
+ʧ,s,s,ʃ,s,θ,k,k,k,k,k,h
+
+# PIE context 14: amlaut /kʲ/ (ḱ) + R
+# notes: the only difference to the above context should be Albanian,
+#        expressing into /k/.
+ʧ,s,s,ʃ,s,k,k,k,k,k,k,h
+
+# PIE context 15: amlaut /kʲ/ (ḱ) + e/eː/i
+# notes: the only difference to rule #13 above should be Tocharian,
+#        expressing into /ʧ/ (as in Sanskrit).
+ʧ,s,s,ʃ,s,θ,ʧ,k,k,k,k,h
+
+# PIE context 16: amlaut /gʲ/ (ǵ) not followed by R or e/eː/i
+# notes: voiced version of rule #13 above; should confirm that Armenian is
+#        /ʦ/
+ʤ,z,z,ʒ,ʦ,dʰ,k,k,g,g,g,k
+
+# PIE context 17: amlaut /gʲ/ (ǵ) + R
+# notes: voiced version of rule #14 above; the only difference to the rule
+#        #16 above should be Albanian.
+ʤ,z,z,ʒ,ʦ,g,k,k,g,g,g,k
+
+# PIE context 18: amlaut /gʲ/ (ǵ) + e/eː/i
+# notes: voices version of rule #15 above; the only difference to the rule
+#        #16 above should be Tocharian.
+ʤ,z,z,ʒ,ʦ,dʰ,ʧ,k,g,g,g,k
+
+# PIE context 19: amlaut /gʲʰ/ (ǵʰ)
+# notes: should add a context for when in Latin it is expressed as /g/.
+h,z,z,ʒ,ʣ,d/dʰ,k,k,kʰ,h,g,g
+
+# PIE context 20: V + /gʲʰ/ (ǵʰ) + V (not e/eː/i)
+# notes: the only difference to the rule above should be in Armenian,
+#        expressed as /z/.
+h,z,z,ʒ,z,d/dʰ,k,k,kʰ,h,g,g
+
+# PIE context 21: /gʲʰ/ (ǵʰ) + e/eː/i
+# notes: the only difference to rule #19 bove should be in Tocharian,
+#        expressed as /ʃ/. This should be checked.
+h,z,z,ʒ,ʣ,d/dʰ,ʃ,k,kʰ,h,g,g
+
+# PIE context 22: h1e (not amlaut)
+a,a,e,e,e,e,ɪ,e,e,e,e,i
+
+# PIE context 23: h2e (not amlaut)
+a,a,o,a,a,a,a,a,a,a,a,a
+
+# PIE context 24: h3e (not amlaut)
+# notes: confirm Hittite /aː/
+a,a,o,a,o,a,a,aː,o,o,o,a
+
+# PIE context 25: Ho (not amlaut)
+a,a,o,a,o,a,a,a/aː,o,o,o,a
+
