@@ -20,48 +20,85 @@ The features are:
 
 - *syll* (syllabic): Indicating a syllabic peak. Vowels are `[+syll]`; glides are `[–syll]`; and consonants are normally also `[–syll]`, but liquids and nasal consonants "could become syllabic under special circumstances" (SPE, p. 354). This feature replaces the feature `[vocalic]` proposed on p. 302 of SPE.
 
+The combination of the *cons* and *syll* features allow to distinguish, roughly, between consonants, glides and vowels, however making possible to have syllabic consonants and non-syllabic vowels, and even "syllabic glides" or "non-consonantal consonants". In our standard, we are treating only /j/ (palatal approximant), /ɰ/ (velar approximant), /ʍ/ (voiceless labiovelar approximant), /w/ (voiced labiovelar approximant) and /ɥ/ (labialized palatal approximant) as glides (i.e., non-syllabic and non-consonantal approximants), but this is subject to revision.
+
 - *obstr* (obstruent): The inverse of SPE's `[sonorant]`. "Sonorants are sounds produced with a vocal tract cavity configuration in which spontaneous voicing is possible; obstruents are produced with a cavity configuration that makes spontaneous voicing impossible" (SPE, p. 302). Obstruents are constituted by the combination of (oral) stops (including affricates) and fricatives. In obstruents, the air flow is either interrupted (in the case of stops) or narrowed sufficiently to cause turbulence, and thus air noise (fricatives). Stops (including affricates) and fricatives are `[+obstr]`; vowels, glides, and liquid or nasal consonants are `[–obstr]`.
 
-- *high*: "High sounds are produced by raising the body of the tongue above the level that it occupies in the neutral position; nonhigh sounds are produced without such a raising of the tongue body" (SPE, p. 304). High vowels such as [i], [u], and the front-rounded [y] are `[+high]`; glides such as [w] and [j] are `[+high]`; and palatal and velar consonants are `[+high]`.
+- *high*: "High sounds are produced by raising the body of the tongue above the level that it occupies in the neutral position; nonhigh sounds are produced without such a raising of the tongue body" (SPE, p. 304). High vowels such as [i], [u], and the front-rounded [y] are `[+high]`; glides such as [w] and [j] are `[+high]`; and palatal and velar consonants are `[+high]`. Labio-velars are also set to `[+high]`.
+
+TODO: check `near-close` and `close-mid` vowels.
 
 - *low*: "Low sounds are produced by lowering the body of the tongue below the level that it occupies in the neutral position; nonlow sounds are produced without such a lowering of the body of the tongue" (SPE, p. 305). Low vowels such as [a] and pharyngeal consonants such as Arabic ‘ayn [ʕ] are `[+low]`.
 
+TODO: check `near-open` and `open-mid` vowels.
+TODO: should `glottal` be `[+low]`? What about `uvular` (less probable)?
+
 - *back*: "Back sounds are produced by retracting the body of the tongue from the neutral position; nonback sounds are produced without such a retraction from the neutral position" (SPE, p. 305). "Back vowels such as [o] and [u], and velar, uvular, and pharyngeal consonants are `[+back]`" (SPE, p. 305).
+
+TODO: what about near-back vowels, such as /ʊ/?
+TODO: what about labio-velar consonants?
 
 - *round* (rounded): "Rounded sounds are produced with a narrowing of the lip orifice; nonrounded sounds are produced without such a narrowing" (SPE, p. 309). Rounded back vowels such as [o] and [u], the rounded front vowel [y], the glide [w], and labiovelar consonants such as [kʷ] and [gʷ] are `[+round]`.
 
-- *cor* (coronal): "Coronal consonants are produced with the blade of the tongue raised from its neutral position; noncoronal sounds are produced with the blade of the tongue in the neutral position" (SPE, p. 304). Dental, alveolar, and palatal consonants are `[+cor]`, labial and velar consonants are `[–cor]`, vowels and glides are generally `[–cor]` (but retroflex vowels can be `[+cor]`).
+- *cor* (coronal): "Coronal consonants are produced with the blade of the tongue raised from its neutral position; noncoronal sounds are produced with the blade of the tongue in the neutral position" (SPE, p. 304). Dental, alveolar, and palatal consonants are `[+cor]`, labial and velar consonants are `[–cor]`, vowels and glides are generally `[–cor]` (but retroflex vowels can be `[+cor]`). Postalveolars and alveolopalatals were also set to `[+cor]`.
 
 - *ant* (anterior): "Anterior sounds are produced with an obstruction that is located in front of the palato-alveolar region of the mouth; nonanterior sounds are produced without such an obstruction" (SPE, p. 304). Labial, dental, and alveolar consonants are `[+ant]`, palatal and velar consonants are `[–ant]`, vowels and glides are `[–ant]`.
+
+TODO: what about /ɥ/ (labialized palatal approximant) and other labialized consonants?
+TODO: post-alveolars were not set to this features, but what about alveolo-palatal and palato-alveolar? For the time being, these two are set, but it is subject to revision.
 
 - *distr* (distributed): SPE's definition of this feature refers only to consonants: "Distributed sounds are produced with a constriction that extends for a considerable distance along the direction of the air flow; nondistributed sounds are produced with a constriction that extends only for a short distance in this direction" (p. 312). Among consonants, then, this feature distinguishes articulatorily between the following pairs of classes of sounds:
 
 |                                             | +distr    | –distr       |
+| ------------------------------------------- | --------- | ------------ |
 | upper lip vs. edge of upper incisors        | bilabials | labiodentals |
 | inner face of upper incisors vs. their edge | dentals   | interdentals |
 | tongue blade vs. tip of tongue              | laminals  | apicals      |
 | velum vs. uvula                             | velars    | uvulars      |
 
+TODO: work on the distinction between dental and interdental, not set in the reference yet.
+TODO: the distinction between laminals and apicals should only apply to coronals, if I am correct; work is needed, nothing was set in the reference yet.
+TODO: should labiovelars be distributed? only when glides? nothing set yet.
+
 Additionally, AlterPhono's usage extends the value `[+distr]` to vowels and glides.
+
+TODO: check if all glides should be `[+distr]`, in particular voiceless ones.
 
 - *cont* (continuant): Continuant sounds are those in whose production  "the primary constriction in the [vocal] tract is not narrowed to the point where the air flow past the constriction is blocked; in [both oral and nasal] stops the air flow through the [center of the] mouth is effectively blocked" (SPE, p. 317; emphasis added). The feature `[cont]` is the main distinguisher between stops `[–cont]` and fricatives `[+cont]`. Although the value of this feature in liquids is controversial, AlterPhono takes the "tap" and trilled [r] as `[+cont]`, and laterals as `[–cont]`, based on reasoning given by SPE (p. 318). Please note that the term "continuant" refers only to the ability of the airflow to continue past a primary constriction in the mouth, not broadly to just any continuation of the airflow.  On this basis, nasal and lateral consonants can be `[–cont]` and still allow the airflow to "continue", and vowels and glides are `[+cont]`.
 
+Hartman does not explicitly mark affricates as `[+cont]`, possibly because they don't seem to be treated as a single phoneme but as a stop plus fricative in his Latin to Spanish models, but here they are set.
+
+TODO: as with `[distr]`, check if all glides should be marked as continuant in the reference.
+TODO: confirm that lateral fricatives should me marked as `[+cont]` (as currently in the reference)
+
 - *delrel* (delayed release): SPE uses this feature to differentiate affricates and fricatives `[+delrel]`, on one hand, from plain stops `[–delrel]` on the other.  In the SPE definition, Delayed Release characterizes consonants in which "turbulence is generated in the vocal tract so that the release phase of affricates is acoustically quite similar to the cognate fricative" (p. 318). AlterPhono more broadly treats as `[+delrel]` all sounds except plain oral stops.  In addition to fricatives and affricates, all vowels, glides, and nasal or liquid consonants are `[+delrel]`.
+
+TODO: based on Hartman's reasoning, implosives, like stops, are not marked for delayed release in my reference, but this should be checked.
 
 - *strid* (strident): "Strident sounds are marked acoustically by greater noisiness [due to air turbulence] than their nonstrident counterparts" (SPE, p. 329). Only fricatives and affricates can be `[+strid]`; all other sounds are `[–strid]`. Among fricatives, this feature serves to differentiate acoustically between the following pairs of classes of sounds:
 
 | `[+strid]`      | `[–strid]`    |
+| --------------- | ------------- |
 | labiodental     | bilabial      |
 | dental/alveolar | interdental   |
 | uvular          | velar         |
 
+TODO: it is not exactly clear if Hartman treats only labiodental, dental, alveolar and uvular fricatives as strident, or all fricatives plus other sounds. Should check, nothing was set in the reference.
+
 - *voice* (voiced): Voiced sounds, in the simplest terms, are those in whose production the vocal cords vibrate (see SPE, pp. 326-327). Vowels, glides, and sonorants tend to be `[+voice]`. This feature serves mainly to distinguish between voiceless and voiced obstruents.
+
+TODO: Note that /ʍ/, while a glide, was not set to `[+voice]`, as it is defined as a voiceless labiovelar approximant; should check its actual syllabicity.
 
 - *nasal* (nasal): "Nasal sounds are produced with a lowered velum which allows the air to escape through the nose; nonnasal sounds are produced with a raised velum so that the air from the lungs can escape only through the mouth" (SPE, p. 316). The nasal consonants [m] and [n], and nasal vowels such as [ã] and [õ] are `[+nasal]`.
 
 - *lateral* (lateral): "Lateral sounds are produced by lowering the mid section of the tongue at both sides or at only one side, thereby allowing the air to flow out of the mouth in the vicinity of the molar teeth; in nonlateral sounds, no such side passage is open" (SPE, p. 317). SPE adds that this features "is restricted to coronal consonantal sounds" (p. 317).
 
+TODO: in the reference, it was added to all coronal sounds, including approximants; should check.
+
 - *tense*: "Tense sounds are produced with a deliberate, accurate, maximally distinct gesture that involves considerable muscular effort; nontense sounds are produced rapidly and somewhat indistinctly" (SPE, p. 324). SPE adds that one of the differences "between tense and lax [i.e. nontense] vowels is that the former are executed with a greater deviation from the neutral or rest position of the vocal tract than are the latter" (p. 324). Since the features `[high]` and `[low]` distinguish only three degrees of vowel height (the combination `[+high, +low]` is not permitted), AlterPhono uses the feature [tense] to differentiate the "upper mid" vowels, such as [e] and [o] (`[+tense]`) from the "lower mid" vowels, such as [ɛ] and [ɔ](`[–tense]`). Voiceless consonants are generally treated as `[+tense]`, and voiced ones as `[–tense]`.
+
+TODO: voiceless consonants were not set to `[+tense]`, as per above, but this should be checked (isn't `[-voice]` enough?)
+TODO: nothing was set, as Hartman's Latin to Spanish model is not clear and seems to set all vowels to tense, including low ones.
 
 - *long*: Long sounds are of contrastively longer duration than nonlong sounds. This feature was not proposed by SPE, but AlterPhono's inventory includes this feature first implemented in Hartman's Phono, as it was developed in conjunction with a model for Spanish, as derived from Latin, and Latin has contrastive vowel length. AlterPhono also uses this feature to differentiate between the "tap" and the trilled [r], and it is potentially available to contrast geminate consonants with their simple counterparts.
 
@@ -76,63 +113,63 @@ The usage of binary features modeled after Chomsky & Halle can be difficult and 
 three letters
 single words (with hyphens)
 
-| Abbreviation   | Feature               | Category            |
-| `vcd`          | voiced                | voiceness           |
-| `vls`          | voiceless             | voiceness           |
-| `blb`          | bilabial              | consonant-place     |
-| `lbd`          | labio-dental          | consonant-place     |
-| `dnt`          | dental                | consonant-place     |
-| `alv`          | alveolar              | consonant-place     |
-| `rfx`          | retroflex             | consonant-place     |
-| `pla`          | palato-alveolar       | consonant-place     |
-| `pal`          | palatal               | consonant-place     |
-| `pta`          | postalveolar          | consonant-place     |
-| `vel`          | velar                 | consonant-place     |
-| `lbv`          | labio-velar           | consonant-place     |
-| `lpt`          | labio-palatal         | consonant-place     |
-| `uvl`          | uvular                | consonant-place     |
-| `phr`          | pharyngeal            | consonant-place     |
-| `glt`          | glottal               | consonant-place     |
-| `epg`          | epiglottal            | consonant-place     |
-| `pav`          | palato-alveolar-velar | consonant-place     |
-| `stp`          | stop                  | consonant-manner    |
-| `frc`          | fricative             | consonant-manner    |
-| `nas`          | nasal                 | consonant-manner    |
-| `orl`          | oral                  | consonant-manner    |
-| `apr`          | approximant           | consonant-manner    |
-| `vwl`          | vowel                 | consonant-manner    |
-| `lat`          | lateral               | consonant-manner    |
-| `ctl`          | central               | consonant-manner    |
-| `trl`          | trill                 | consonant-manner    |
-| `flp`          | flap                  | consonant-manner    |
-| `clk`          | click                 | consonant-airstream |
-| `ejc`          | ejective              | consonant-airstream |
-| `imp`          | implosive             | consonant-airstream |
-| `hgh`          | high                  | vowel-height        |
-| `smh`          | semi-high             | vowel-height        |
-| `umd`          | upper-mid             | vowel-height        |
-| `mid`          | mid                   | vowel-height        |
-| `lmd`          | lower-mid             | vowel-height        |
-| `slw`          | semi-low              | vowel-height        |
-| `low`          | low                   | vowel-height        |
-| `fnt`          | front                 | vowel-backness      |
-| `nft`          | near-front            | vowel-backness      |
-| `cnt`          | central               | vowel-backness      |
-| `nbk`          | near-back             | vowel-backness      |
-| `bck`          | back                  | vowel-backness      |
-| `unr`          | unrounded             | roundness           |
-| `rnd`          | rounded               | roundness           |
-| `asp`          | aspirated             | release             |
-| `unx`          | unexploded            | release             |
-| `mrm`          | murmured              | release             |
-| `syl`          | syllabic              | syllabicity         |
-| `lng`          | long                  | longness            |
-| `vzd`          | velarized             | co-articulation     |
-| `lzd`          | labialized            | co-articulation     |
-| `pzd`          | palatalized           | co-articulation     |
-| `rzd`          | rhoticized            | co-articulation     |
-| `nzd`          | nasalized             | co-articulation     |
-| `fzd`          | pharyngealized        | co-articulation     |
+| Feature               | Category            |
+| voiced                | voiceness           |
+| voiceless             | voiceness           |
+| bilabial              | consonant-place     |
+| labio-dental          | consonant-place     |
+| dental                | consonant-place     |
+| alveolar              | consonant-place     |
+| retroflex             | consonant-place     |
+| palato-alveolar       | consonant-place     |
+| palatal               | consonant-place     |
+| postalveolar          | consonant-place     |
+| velar                 | consonant-place     |
+| labio-velar           | consonant-place     |
+| labio-palatal         | consonant-place     |
+| uvular                | consonant-place     |
+| pharyngeal            | consonant-place     |
+| glottal               | consonant-place     |
+| epiglottal            | consonant-place     |
+| palato-alveolar-velar | consonant-place     |
+| stop                  | consonant-manner    |
+| fricative             | consonant-manner    |
+| nasal                 | consonant-manner    |
+| oral                  | consonant-manner    |
+| approximant           | consonant-manner    |
+| vowel                 | consonant-manner    |
+| lateral               | consonant-manner    |
+| central               | consonant-manner    |
+| trill                 | consonant-manner    |
+| flap                  | consonant-manner    |
+| click                 | consonant-airstream |
+| ejective              | consonant-airstream |
+| implosive             | consonant-airstream |
+| high                  | vowel-height        |
+| semi-high             | vowel-height        |
+| upper-mid             | vowel-height        |
+| mid                   | vowel-height        |
+| lower-mid             | vowel-height        |
+| semi-low              | vowel-height        |
+| low                   | vowel-height        |
+| front                 | vowel-backness      |
+| near-front            | vowel-backness      |
+| central               | vowel-backness      |
+| near-back             | vowel-backness      |
+| back                  | vowel-backness      |
+| unrounded             | roundness           |
+| rounded               | roundness           |
+| aspirated             | release             |
+| unexploded            | release             |
+| murmured              | release             |
+| syllabic              | syllabicity         |
+| long                  | longness            |
+| velarized             | co-articulation     |
+| labialized            | co-articulation     |
+| palatalized           | co-articulation     |
+| rhoticized            | co-articulation     |
+| nasalized             | co-articulation     |
+| pharyngealized        | co-articulation     |
 
 ## Rule Grammar
 
