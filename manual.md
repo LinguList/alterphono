@@ -212,11 +212,10 @@ An ``IF`` directive specifies a condition that must be met by a phoneme for a ma
 
 Regarding positions, remember that when working on a word (which, interally, is a sequence of phonemes), AlterPhono scans it from the first to the last item, looking for matches and applying changes as needed. Phonemes are indexed from 1 to the end of the word, but they can also be referred to with negative indexes, counting from the end, so that -1 is the last phoneme. For example, take the word ``international`` as represented in IPA according to a standard American pronountiaion, /ˌɪntɚˈnæʃənəl/. This word is composed of eleven phonemes, each of them can be referred to by a positive index, counting from the beginning, or a negative one, counting from the end, so that, for example, you can refer to its /ʃ/ by either index 7 or 5.
 
-| Phonemes                                               |
-| ------------------------------------------------------ |
-| ɪ   | n   | t  | ɚ  | n  | æ  | ʃ  | ə  | n  | ə  | l  |
-| 1   | 2   | 3  | 4  | 5  | 6  | 7  | 8  | 9  | 10 | 11 |
-| -11 | -10 | -9 | -8 | -7 | -6 | -5 | -4 | -3 | -2 | -1 |
+| ɪ   | n   | t   | ɚ   | n   | æ   | ʃ   | ə   | n   | ə   | l   |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1   | 2   | 3   | 4   | 5   | 6   | 7   | 8   | 9   | 10  | 11  |
+| -11 | -10 | -9  | -8  | -7  | -6  | -5  | -4  | -3  | -2  | -1  |
 
 If you specify the index for a phoneme that does not exist (such as giving an ``IF`` directive for the fifth phoneme in a word composed of less than five phonemes), the rule simply does not match. This indexes are used mostly to refer to rules that are applied only to the first or last phoneme in a word: for example, to make sure that a given rule is only applied to the phoneme /s/ at the beginning of a word, you could write, as we will see, ``IF: 1 /s/``. In the same way, if a rule is only to be applied when a word ends with a nasal phoneme, you could write ``IF: -1 +nasal``.
 
