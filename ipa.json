@@ -1,418 +1,442 @@
 {
+  "m": {
+    "desc": "bilabial nasal",
+    "ch": "+cons,+ant,+distr,+voice,+nasal"
+  },
+  "n": {
+    "desc": "alveolar nasal",
+    "ch": "+cons,+distr,+voice,+nasal"
+  },
+  "ɳ": {
+    "desc": "retroflex nasal",
+    "ch": "+cons,+cor,+distr,+voice,+nasal"
+  },
+  "ɲ": {
+    "desc": "palatal nasal",
+    "ch": "+cons,+high,+cor,+distr,+voice,+nasal"
+  },
+  "ŋ": {
+    "desc": "velar nasal",
+    "ch": "+cons,+high,+back,+distr,+voice,+nasal"
+  },
+  "ɴ": {
+    "desc": "uvular nasal",
+    "ch": "+cons,+back,+distr,+voice,+nasal"
+  },
   "p": {
     "desc": "voiceless bilabial stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+ant,+distr"
   },
   "b": {
     "desc": "voiced bilabial stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+ant,+distr,+voice"
   },
   "t": {
     "desc": "voiceless alveolar stop",
-    "ch": ""
+    "ch": "+cons,+obstr"
   },
   "d": {
     "desc": "voiced alveolar stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+voice"
   },
   "ʈ": {
     "desc": "voiceless retroflex stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor"
   },
   "ɖ": {
     "desc": "voiced retroflex stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+voice"
   },
   "c": {
     "desc": "voiceless palatal stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+high,+cor"
   },
   "ɟ": {
     "desc": "voiced palatal stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+high,+cor,+voice"
   },
   "k": {
     "desc": "voiceless velar stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+high,+back,+distr"
   },
   "g": {
     "desc": "voiced velar stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+high,+back,+distr,+voice"
   },
   "q": {
     "desc": "voiceless uvular stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+back"
   },
   "ɢ": {
     "desc": "voiced uvular stop",
-    "ch": ""
+    "ch": "+cons,+obstr,+back,+voice"
   },
   "ʡ": {
     "desc": "epiglottal stop",
-    "ch": ""
+    "ch": "+cons,+obstr"
   },
   "ʔ": {
     "desc": "glottal stop",
-    "ch": ""
+    "ch": "+cons,+obstr"
   },
   "ʦ": {
     "desc": "voiceless alveolar affricate",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+ant,+cont,+delrel,+strid"
   },
   "ʣ": {
     "desc": "voiced alveolar affricate",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+ant,+cont,+delrel,+strid,+voice"
   },
   "ʧ": {
     "desc": "voiceless postalveolar affricate",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+cont,+delrel,+strid"
   },
   "ʤ": {
     "desc": "voiced postalveolar affricate",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+cont,+delrel,+strid,+voice"
   },
   "ʨ": {
     "desc": "voiceless alveolo-palatal affricate",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+ant,+cont,+delrel,+strid"
   },
   "ʥ": {
     "desc": "voiced alveolo-palatal affricate",
-    "ch": ""
+    "ch": "+cons,+obstr,+cor,+ant,+cont,+delrel,+strid,+voice"
   },
   "s": {
     "desc": "voiceless alveolar fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel"
   },
   "z": {
     "desc": "voiced alveolar fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+voice"
   },
   "ʃ": {
     "desc": "voiceless palato-alveolar fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel"
   },
   "ʒ": {
     "desc": "voiced palato-alveolar fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+voice"
   },
   "ʂ": {
     "desc": "voiceless retroflex fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+cont,+delrel"
   },
   "ʐ": {
     "desc": "voiceless retroflex fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+cont,+delrel"
   },
   "ɕ": {
     "desc": "voiceless alveolo-palatal fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel"
   },
   "ʑ": {
     "desc": "voiced alveolo-palatal fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+voice"
   },
   "ɸ": {
     "desc": "voiceess bilabial fricative",
-    "ch": ""
+    "ch": "+cons,+ant,+distr,+cont,+delrel"
   },
   "β": {
     "desc": "voiced bilabial fricative",
-    "ch": ""
+    "ch": "+cons,+ant,+distr,+cont,+delrel,+voice"
   },
   "f": {
     "desc": "voiceless labiodental fricative",
-    "ch": ""
+    "ch": "+cons,+ant,+cont,+delrel"
   },
   "v": {
     "desc": "voiced labiodental fricative",
-    "ch": ""
+    "ch": "+cons,+ant,+cont,+delrel,+voice"
   },
   "θ": {
     "desc": "voiceless dental fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel"
   },
   "ð": {
     "desc": "voiced dental fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+voice"
   },
   "ç": {
     "desc": "voiceless palatal fricative",
-    "ch": ""
+    "ch": "+cons,+high,+cor,+cont,+delrel"
   },
   "ʝ": {
     "desc": "voiced palatal fricative",
-    "ch": ""
+    "ch": "+cons,+high,+cor,+cont,+delrel,+voice"
   },
   "x": {
     "desc": "voiceless velar fricative",
-    "ch": ""
+    "ch": "+cons,+high,+back,+distr,+cont,+delrel"
   },
   "ɣ": {
     "desc": "voiced velar fricative",
-    "ch": ""
+    "ch": "+cons,+high,+back,+distr,+cont,+delrel,+voice"
   },
   "χ": {
     "desc": "voiceless uvular fricaive",
-    "ch": ""
+    "ch": "+cons,+back,+cont,+delrel"
   },
   "ʁ": {
     "desc": "voiced uvular fricative",
-    "ch": ""
+    "ch": "+cons,+back,+cont,+delrel,+voice"
   },
   "ħ": {
     "desc": "voiceless pharyngeal fricative",
-    "ch": ""
+    "ch": "+cons,+low,+back,+cont,+delrel"
   },
   "ʕ": {
     "desc": "voiced pharyngeal fricative",
-    "ch": ""
+    "ch": "+cons,+low,+back,+cont,+delrel,+voice"
   },
   "h": {
     "desc": "voiceless glottal fricative",
-    "ch": ""
+    "ch": "+cons,+cont,+delrel"
   },
   "ɦ": {
     "desc": "voiced glottal fricative",
-    "ch": ""
+    "ch": "+cons,+cont,+delrel,+voice"
   },
   "ʋ": {
     "desc": "labiodental approximant",
-    "ch": ""
+    "ch": "+cons,+ant,+delrel"
   },
   "ɹ": {
     "desc": "alveolar approximant",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+delrel"
   },
   "ɻ": {
     "desc": "retroflex approximant",
-    "ch": ""
+    "ch": "+cons,+cor,+delrel"
   },
   "j": {
     "desc": "palatal approximant",
-    "ch": ""
+    "ch": "+high,+cor,+distr,+cont,+delrel,+voice"
   },
   "ɰ": {
     "desc": "velar approximant",
-    "ch": ""
+    "ch": "+high,+back,+distr,+cont,+delrel,+voice"
   },
   "ⱱ": {
     "desc": "labiodental flap",
-    "ch": ""
+    "ch": "+cons,+ant,+cont,+delrel"
   },
   "ɾ": {
     "desc": "alveolar flap",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel"
   },
   "ɽ": {
     "desc": "retroflex flap",
-    "ch": ""
+    "ch": "+cons,+cor,+cont,+delrel"
   },
   "ʙ": {
     "desc": "bilabial trill",
-    "ch": ""
+    "ch": "+cons,+ant,+distr,+cont,+delrel"
   },
   "r": {
     "desc": "alveolar trill",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel"
   },
   "ʀ": {
     "desc": "uvular trill",
-    "ch": ""
+    "ch": "+cons,+back,+cont,+delrel"
   },
   "ʜ": {
     "desc": "voiceless epiglottal trill",
-    "ch": ""
+    "ch": "+cons,+cont,+delrel"
   },
   "ʢ": {
     "desc": "voiced epiglottal trill",
-    "ch": ""
+    "ch": "+cons,+cont,+delrel,+voice"
   },
   "ɬ": {
     "desc": "voiceless alveolar lateral fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+lateral"
   },
   "ɮ": {
     "desc": "voiced alveolar lateral fricative",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+voice,+lateral"
   },
   "l": {
     "desc": "alveolar lateral approximant",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+delrel,+lateral"
   },
   "ɭ": {
     "desc": "retroflex lateral approximant",
-    "ch": ""
+    "ch": "+cons,+cor,+delrel,+lateral"
   },
   "ʎ": {
     "desc": "palatal lateral approximant",
-    "ch": ""
+    "ch": "+cons,+high,+cor,+delrel,+lateral"
   },
   "ʟ": {
     "desc": "velar lateral approximant",
-    "ch": ""
+    "ch": "+cons,+high,+back,+distr,+delrel,+lateral"
   },
   "ɺ": {
     "desc": "alveolar lateral flap",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+cont,+delrel,+lateral"
   },
   "ʍ": {
     "desc": "voiceless labiovelar approximant",
-    "ch": ""
+    "ch": "+high,+round,+distr,+cont,+delrel"
   },
   "w": {
     "desc": "voiced labiovelar approximant",
-    "ch": ""
+    "ch": "+high,+round,+distr,+cont,+delrel,+voice"
   },
   "ɥ": {
     "desc": "labialized palatal approximant",
-    "ch": ""
+    "ch": "+high,+cor,+distr,+cont,+delrel,+voice"
   },
   "ɫ": {
     "desc": "alveolar lateral approximant",
-    "ch": ""
+    "ch": "+cons,+cor,+ant,+delrel,+lateral"
   },
   "ɓ": {
-    "desc": "voiced bilabial implosive",
-    "ch": ""
+    "desc": "bilabial implosive",
+    "ch": "+cons,+ant,+distr,+voice"
   },
   "ɗ": {
-    "desc": "voiced alveolar implosive",
-    "ch": ""
+    "desc": "alveolar implosive",
+    "ch": "+cons,+cor,+ant,+voice"
   },
   "ᶑ": {
-    "desc": "voiced retroflex implosive",
-    "ch": ""
+    "desc": "retroflex implosive",
+    "ch": "+cons,+cor,+voice"
   },
   "ʄ": {
-    "desc": "voiced palatal implosive",
-    "ch": ""
+    "desc": "palatal implosive",
+    "ch": "+cons,+high,+cor,+voice"
   },
   "ɠ": {
-    "desc": "voiced velar implosive",
-    "ch": ""
+    "desc": "velar implosive",
+    "ch": "+cons,+high,+back,+distr,+voice"
   },
   "ʛ": {
-    "desc": "voiced uvular implosive",
-    "ch": ""
+    "desc": "uvular implosive",
+    "ch": "+cons,+high,+back,+voice"
   },
   "i": {
     "desc": "close front unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+high,+distr,+cont,+delrel,+voice"
   },
   "y": {
     "desc": "close front rounded vowel",
-    "ch": ""
+    "ch": "+syll,+high,+round,+distr,+cont,+delrel,+voice"
   },
   "ɨ": {
     "desc": "close central rounded vowel",
-    "ch": ""
+    "ch": "+syll,+high,+round,+distr,+cont,+delrel,+voice"
   },
   "ʉ": {
     "desc": "close central unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+high,+distr,+cont,+delrel,+voice"
   },
   "ɯ": {
     "desc": "close back unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+high,+back,+distr,+cont,+delrel,+voice"
   },
   "u": {
     "desc": "close back rounded vowel",
-    "ch": ""
+    "ch": "+syll,+high,+back,+round,+distr,+cont,+delrel,+voice"
   },
   "ɪ": {
     "desc": "near-close near-front unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ʏ": {
     "desc": "near-close near-front rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "ɪ̈": {
     "desc": "near-close central unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ʊ̈": {
     "desc": "near-close central rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "ʊ": {
     "desc": "near-close near-back rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "e": {
     "desc": "close-mid front unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ø": {
     "desc": "close-mid front rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "ɘ": {
     "desc": "close-mid central unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ɵ": {
     "desc": "close-mid central rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "ɤ": {
     "desc": "close-mid back unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+back,+distr,+cont,+delrel,+voice"
   },
   "o": {
     "desc": "close-mid back rounded vowel",
-    "ch": ""
+    "ch": "+syll,+back,+round,+distr,+cont,+delrel,+voice"
   },
   "ə": {
     "desc": "mid central unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ɛ": {
     "desc": "open-mid front unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "œ": {
     "desc": "open-mid front rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "ɜ": {
     "desc": "open-mid central unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ɞ": {
     "desc": "open-mid central rounded vowel",
-    "ch": ""
+    "ch": "+syll,+round,+distr,+cont,+delrel,+voice"
   },
   "ʌ": {
     "desc": "open-mid back unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+back,+distr,+cont,+delrel,+voice"
   },
   "ɔ": {
     "desc": "open-mid back rounded vowel",
-    "ch": ""
+    "ch": "+syll,+back,+round,+distr,+cont,+delrel,+voice"
   },
   "æ": {
     "desc": "near-open front unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "ɐ": {
     "desc": "near-open central unroundend vowel",
-    "ch": ""
+    "ch": "+syll,+distr,+cont,+delrel,+voice"
   },
   "a": {
     "desc": "open front unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+low,+distr,+cont,+delrel,+voice"
   },
   "ɶ": {
     "desc": "open front rounded vowel",
-    "ch": ""
+    "ch": "+syll,+low,+round,+distr,+cont,+delrel,+voice"
   },
   "ɑ": {
     "desc": "open back unrounded vowel",
-    "ch": ""
+    "ch": "+syll,+low,+back,+distr,+cont,+delrel,+voice"
   },
   "ɒ": {
     "desc": "open back rounded vowel",
-    "ch": ""
+    "ch": "+syll,+low,+back,+round,+distr,+cont,+delrel,+voice"
   }
 }
