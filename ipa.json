@@ -1,110 +1,330 @@
-# how can /ʟ/ be both high and low?
-# what about /w/? and the difference to schwa?
-
-p: consonantal, labial, anterior
-m: consonantal, continuant acoustic, sonorant, nasal, labial, anterior, voice
-t: consonantal, coronal, anterior
-b: consonantal, labial, anterior, voice
-d: consonantal, coronal, anterior, voice
-k: consonantal, dorsal, high, back
-n: consonantal, continuant acoustic, sonorant, nasal, coronal, anterior, voice
-g: consonantal, dorsal, high, back, voice
-f: consonantal, continuant acoustic, continuant articulatory, labial, labiodental, anterior
-v: consonantal, continuant acoustic, continuant articulatory, labial, labiodental, anterior, voice
-ʃ: consonantal, continuant acoustic, continuant articulatory, strident, coronal, distributed
-ʒ: consonantal, continuant acoustic, continuant articulatory, strident, coronal, distributed, voice
-s: consonantal, continuant acoustic, continuant articulatory, strident, coronal, anterior
-z: consonantal, continuant acoustic, continuant articulatory, strident, coronal, anterior, voice
-j: continuant acoustic, continuant articulatory, sonorant, approximant, coronal, dorsal, high, voice
-h: consonantal, continuant acoustic, continuant articulatory, spread glottis
-ʤ: consonantal, delayed release, strident, coronal, distributed, voice
-ʧ: consonantal, delayed release, strident, coronal, distributed
-ð: consonantal, continuant acoustic, continuant articulatory, coronal, anterior, distributed, voice
-θ: consonantal, continuant acoustic, continuant articulatory, coronal, anterior, distributed
-l: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, lateral, coronal, anterior, voice
-ʔ: consonantal, constricted glottis
-ŋ: consonantal, continuant acoustic, sonorant, nasal, dorsal, high, back, voice
-ɹ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, coronal, anterior, voice
-x: consonantal, continuant acoustic, continuant articulatory, dorsal, high, back
-r: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, trill, coronal, anterior, voice
-ʝ: consonantal, continuant acoustic, continuant articulatory, distributed, dorsal, high, voice
-ʁ: consonantal, continuant acoustic, continuant articulatory, dorsal, back, voice
-ɥ: continuant acoustic, continuant articulatory, sonorant, approximant, labial, round, coronal, dorsal, high, voice
-ɦ: consonantal, continuant acoustic, continuant articulatory, voice, spread glottis
-ɾ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, tap, coronal, anterior, voice
-χ: consonantal, continuant acoustic, continuant articulatory, dorsal, back
-ʋ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, labial, labiodental, anterior, voice
-ç: consonantal, continuant acoustic, continuant articulatory, coronal, distributed, dorsal
-ʦ: consonantal, delayed release, strident, coronal, anterior
-ʣ: consonantal, delayed release, strident, coronal, anterior
-ɟ: consonantal, coronal, distributed, dorsal, high, voice
-pʰ: consonantal, labial, anterior, spread glottis
-ɳ: consonantal, continuant acoustic, sonorant, nasal, coronal, voice
-ɲ: consonantal, continuant acoustic, sonorant, nasal, coronal, distributed, dorsal, high, voice
-ɸ: consonantal, continuant acoustic, continuant articulatory, labial, anterior
-β: consonantal, continuant acoustic, continuant articulatory, labial, anterior, voice
-ɣ: consonantal, continuant acoustic, continuant articulatory, dorsal, high, back, voice
-ɬ: consonantal, continuant acoustic, continuant articulatory, lateral, coronal, anterior
-ɮ: consonantal, continuant acoustic, continuant articulatory, lateral, coronal, anterior, voice
-kʰ: consonantal, dorsal, high, back, spread glottis
-tʰ: consonantal, coronal, anterior, spread glottis
-ʈ: consonantal, coronal
-ɖ: consonantal, coronal, voice
-ʈʰ: consonantal, coronal, spread glottis
-ɖʰ: consonantal, coronal, voice, spread glottis
-kʷ: consonantal, labial, round, dorsal, high, back
-gʷ: consonantal, labial, round, dorsal, high, back, voice
-ɢ: consonantal, dorsal, back, voice
-kʲ: consonantal, coronal, dorsal, high
-gʲ: consonantal, coronal, dorsal, high, voice
-ɱ: consonantal, continuant acoustic, sonorant, nasal, labial, labiodental, anterior, voice
-pʷ: consonantal, labial, round, anterior
-bʷ: consonantal, labial, round, anterior, voice
-ʟ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, dorsal, high, low, voice
-ɭ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, coronal, voice
-ʎ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, coronal, distributed, dorsal, high, voice
-ɽ: consonantal, continuant acoustic, continuant articulatory, sonorant, approximant, tap, coronal, voice
-
-o: back, tense, round
-oː: back, tense, round, long
-ɔ: back, round
-ɔː: back, round, long
-ɐ: low, tense
-ɤ: back, tense
-e: front, tense
-eː: front, tense, long
-ø: front, tense, round
-øː: front, tense, round, long
-ɛ: front
-ɛː: front, long
-œ: front, round
-œː: front, round, long
-æ: low, front, tense
-æː: low, front, tense, long
-ɶ: low, front, round
-a: low
-aː: low, long
-ʌ: back
-ʌː: back, long
-ɑ: low, back
-ɑː: low, back, long
-ɒ: low, back, round
-ɒː: low, back, round, long
-ɵ: round
-ɨ: high, tense
-i: high, front, tense
-iː: high, front, tense, long
-y: high, front, tense, round
-yː: high, front, tense, round, long
-ɪ: high, front
-ɪː: high, front, long
-ʏ: high, front, round
-ʏː: high, front, round, long
-ʉ: high, tense, round
-ʉː: high, tense, round, long
-ɯ: high, back, tense
-ɯː: high, back, tense, long
-u: high, back, tense, round
-uː: high, back, tense, round, long
-ʊ: high, back, round
-ʊː: high, back, round, long
+{
+  "\u0281": {
+    "description": "voiced uvular fricative", 
+    "features": "+cons, +cont, +voice, +obstr"
+  }, 
+  "t\u02b0": {
+    "description": "aspirated voiceless alveolar stop", 
+    "features": "+cons, +spread, +cor, +ant, +obstr"
+  }, 
+  "\u0283": {
+    "description": "voiceless palatoalveolar fricative", 
+    "features": "+cons, +cont, +cor, +distr, +obstr, +sibilant"
+  }, 
+  "j": {
+    "description": "palatal approximant", 
+    "features": "+cont, +voice, +cor, +high"
+  }, 
+  "b\u02b7": {
+    "description": "labialized voiced bilabial stop", 
+    "features": "+cons, +voice, +lab, +obstr"
+  }, 
+  "\u0289": {
+    "description": "close central rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +high, +tense"
+  }, 
+  "\u028b": {
+    "description": "labiodental approximant", 
+    "features": "+cons, +cont, +voice, +ant"
+  }, 
+  "\u028a": {
+    "description": "near-close near-back rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +high, +back"
+  }, 
+  "\u028d": {
+    "description": "voiceless labiovelar approximant", 
+    "features": "+cont, +high, +back"
+  }, 
+  "\u028c": {
+    "description": "open-mid back unrounded vowel", 
+    "features": "+syll, +cont, +voice"
+  }, 
+  "\u028f": {
+    "description": "near-close near-front rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +high, +front"
+  }, 
+  "\u028e": {
+    "description": "palatal lateral approximant", 
+    "features": "+cons, +cont, +voice, +cor, +distr, +high, +lat"
+  }, 
+  "d": {
+    "description": "voiced alveolar stop", 
+    "features": "+cons, +voice, +cor, +ant, +obstr"
+  }, 
+  "\u0292": {
+    "description": "voiced palatoalveolar fricative", 
+    "features": "+cons, +cont, +voice, +cor, +distr, +obstr, +sibilant"
+  }, 
+  "\u0294": {
+    "description": "glottal stop", 
+    "features": "+cons, +constr, +obstr"
+  }, 
+  "n": {
+    "description": "alveolar nasal", 
+    "features": "+cons, +voice, +cor, +ant, +nasal"
+  }, 
+  "\u029d": {
+    "description": "voiced palatal fricative", 
+    "features": "+cons, +cont, +voice, +cor, +distr, +high, +obstr"
+  }, 
+  "\u029f": {
+    "description": "velar lateral approximant", 
+    "features": "+cons, +cont, +voice, +high, +back, +lat"
+  }, 
+  "\u0279": {
+    "description": "alveolar approximant", 
+    "features": "+cons, +cont, +voice, +cor, +ant"
+  }, 
+  "o": {
+    "description": "close-mid back rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +tense"
+  }, 
+  "\u02a3": {
+    "description": "voiced alveolar affricate", 
+    "features": "+cons, +delrel, +voice, +cor, +ant, +obstr"
+  }, 
+  "\u02a4": {
+    "description": "voiced palatoalveolar affricate", 
+    "features": "+cons, +delrel, +voice, +cor, +distr, +obstr, +sibilant"
+  }, 
+  "\u02a7": {
+    "description": "voiceless palatoalveolar affricate", 
+    "features": "+cons, +delrel, +cor, +distr, +obstr, +sibilant"
+  }, 
+  "p": {
+    "description": "voiceless bilabial stop", 
+    "features": "+cons, +lab, +obstr"
+  }, 
+  "g": {
+    "description": "voiced velar stop", 
+    "features": "+cons, +voice, +back, +obstr"
+  }, 
+  "k\u02b2": {
+    "description": "palatalized voiceless velar stop", 
+    "features": "+cons, +cor, +high, +back, +obstr"
+  }, 
+  "k\u02b0": {
+    "description": "aspirated voiceless velar stop", 
+    "features": "+cons, +spread, +high, +back, +obstr"
+  }, 
+  "k\u02b7": {
+    "description": "labialized voiceless velar stop", 
+    "features": "+cons, +lab, +high, +back, +obstr"
+  }, 
+  "x": {
+    "description": "voiceless velar fricative", 
+    "features": "+cons, +cont, +high, +back, +obstr"
+  }, 
+  "h": {
+    "description": "voiceless glottal fricative", 
+    "features": "+cons, +cont, +obstr"
+  }, 
+  "\u0275": {
+    "description": "close-mid central rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab"
+  }, 
+  "\u03b8": {
+    "description": "voiceless dental fricative", 
+    "features": "+cons, +cont, +cor, +ant, +distr, +obstr"
+  }, 
+  "b": {
+    "description": "voiced bilabial stop", 
+    "features": "+cons, +voice, +lab, +obstr"
+  }, 
+  "g\u02b7": {
+    "description": "labialized voiced velar stop", 
+    "features": "+cons, +voice, +lab, +high, +back, +obstr"
+  }, 
+  "g\u02b2": {
+    "description": "palatalized voiced velar stop", 
+    "features": "+cons, +voice, +cor, +high, +back, +obstr"
+  }, 
+  "\u03c7": {
+    "description": "voiceless uvular fricative", 
+    "features": "+cons, +cont, +obstr"
+  }, 
+  "\u014b": {
+    "description": "velar nasal", 
+    "features": "+cons, +voice, +high, +back, +nasal"
+  }, 
+  "v": {
+    "description": "voiced labiodental fricative", 
+    "features": "+cons, +cont, +voice, +ant, +obstr"
+  }, 
+  "\u03b2": {
+    "description": "voiced bilabial fricative", 
+    "features": "+cons, +cont, +voice, +lab, +obstr"
+  }, 
+  "p\u02b0": {
+    "description": "aspirated voiceless bilabial stop", 
+    "features": "+cons, +spread, +lab, +obstr"
+  }, 
+  "\u0251": {
+    "description": "open back unrounded vowel", 
+    "features": "+syll, +cont, +voice, +low, +back"
+  }, 
+  "\u0250": {
+    "description": "near-open central unrounded vowel", 
+    "features": "+syll, +cont, +voice, +low, +tense"
+  }, 
+  "\u0153": {
+    "description": "open-mid front rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +front"
+  }, 
+  "\u0252": {
+    "description": "open back rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +low, +back"
+  }, 
+  "\u0254": {
+    "description": "open-mid back rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab"
+  }, 
+  "\u0266": {
+    "description": "voiced glottal fricative", 
+    "features": "+cons, +cont, +voice, +obstr"
+  }, 
+  "\u0278": {
+    "description": "voiceless bilabial fricative", 
+    "features": "+cons, +cont, +lab, +obstr"
+  }, 
+  "\u0265": {
+    "description": "labialized palatal approximant", 
+    "features": "+cont, +voice, +cor, +lab, +high"
+  }, 
+  "\u025b": {
+    "description": "open-mid front unrounded vowel", 
+    "features": "+syll, +cont, +voice, +front"
+  }, 
+  "r": {
+    "description": "alveolar trill", 
+    "features": "+cons, +cont, +cor, +ant, +voice, +long, +vibr"
+  }, 
+  "l": {
+    "description": "alveolar lateral approximant", 
+    "features": "+cons, +cont, +voice, +cor, +ant, +lat"
+  }, 
+  "\u025f": {
+    "description": "voiced palatal stop", 
+    "features": "+cons, +voice, +cor, +distr, +high, +obstr"
+  }, 
+  "p\u02b7": {
+    "description": "labialized voiceless bilabial stop", 
+    "features": "+cons, +lab, +obstr"
+  }, 
+  "a": {
+    "description": "open front unrounded vowel", 
+    "features": "+syll, +cont, +voice, +low"
+  }, 
+  "\u0263": {
+    "description": "voiced velar fricative", 
+    "features": "+cons, +cont, +voice, +high, +back, +obstr"
+  }, 
+  "\u0262": {
+    "description": "voiced uvular stop", 
+    "features": "+cons, +voice, +obstr"
+  }, 
+  "e": {
+    "description": "close-mid front unrounded vowel", 
+    "features": "+syll, +cont, +voice, +front, +tense"
+  }, 
+  "\u0264": {
+    "description": "close-mid back unrounded vowel", 
+    "features": "+syll, +cont, +voice, +tense"
+  }, 
+  "\u00e7": {
+    "description": "voiceless palatal fricative", 
+    "features": "+cons, +cont, +cor, +distr, +high, +obstr"
+  }, 
+  "\u00e6": {
+    "description": "near-open front unrounded vowel", 
+    "features": "+syll, +cont, +voice, +low, +front, +tense"
+  }, 
+  "i": {
+    "description": "close front unrounded vowel", 
+    "features": "+syll, +cont, +voice, +high, +front, +tense"
+  }, 
+  "\u0268": {
+    "description": "close central unrounded vowel", 
+    "features": "+syll, +cont, +voice, +high, +tense"
+  }, 
+  "k": {
+    "description": "voiceless velar stop", 
+    "features": "+cons, +voice, +back, +obstr"
+  }, 
+  "\u026a": {
+    "description": "near-close near-front unrounded vowel", 
+    "features": "+syll, +cont, +voice, +high, +front"
+  }, 
+  "m": {
+    "description": "bilabial nasal", 
+    "features": "+cons, +voice, +lab, +nasal"
+  }, 
+  "\u026c": {
+    "description": "voiceless alveolar lateral fricative", 
+    "features": "+cons, +cont, +cor, +ant, +lat, +obstr"
+  }, 
+  "\u026f": {
+    "description": "close back unrounded vowel", 
+    "features": "+syll, +cont, +voice, +high, +back, +tense"
+  }, 
+  "\u026e": {
+    "description": "voiced alveolar lateral fricative", 
+    "features": "+cons, +cont, +voice, +cor, +ant, +lat, +obstr"
+  }, 
+  "\u0271": {
+    "description": "labiodental nasal", 
+    "features": "+cons, +voice, +ant, +nasal"
+  }, 
+  "\u00f0": {
+    "description": "voiced dental fricative", 
+    "features": "+cons, +cont, +voice, +cor, +ant, +distr, +obstr"
+  }, 
+  "s": {
+    "description": "voiceless alveolar fricative", 
+    "features": "+cons, +cont, +cor, +ant, +obstr, +sibilant"
+  }, 
+  "\u0272": {
+    "description": "palatal nasal", 
+    "features": "+cons, +voice, +cor, +distr, +high, +nasal"
+  }, 
+  "u": {
+    "description": "close back rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +high, +back, +tense"
+  }, 
+  "t": {
+    "description": "voiceless alveolar stop", 
+    "features": "+cons, +cor, +ant, +obstr"
+  }, 
+  "w": {
+    "description": "labiovelar approximant", 
+    "features": "+cont, +voice, +high, +back"
+  }, 
+  "\u0276": {
+    "description": "open front rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +low, +front"
+  }, 
+  "y": {
+    "description": "close front rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +high, +front, +tense"
+  }, 
+  "\u00f8": {
+    "description": "close-mid front rounded vowel", 
+    "features": "+syll, +cont, +voice, +lab, +front, +tense"
+  }, 
+  "\u02a6": {
+    "description": "voicelss alveolar affricate", 
+    "features": "+cons, +delrel, +cor, +ant, +obstr"
+  }, 
+  "z": {
+    "description": "voiced alveolar fricative", 
+    "features": "+cons, +cont, +voice, +cor, +ant, +obstr, +sibilant"
+  }, 
+  "f": {
+    "description": "voiceless labiodental fricative", 
+    "features": "+cons, +cont, +ant, +obstr"
+  }, 
+  "\u027e": {
+    "description": "alveolar flap", 
+    "features": "+cons, +cont, +cor, +ant, +voice, +vibr"
+  }
+}
