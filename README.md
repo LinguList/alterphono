@@ -18,9 +18,9 @@ from the Phoible database. The files are in the output directory, and are:
   - phonemes: list of all phonemes in the database, with IPA representation (not complete),
     phoneme count across inventories and binary distinctive features
 
-Description of files in 'output'
+## Description of files in 'output'
 
-=== output/allophones.csv
+### output/allophones.csv
 
 Fields:
   - GlyphID - the unique ID for phonemes, to be used as index; it represents the 'base'
@@ -32,13 +32,13 @@ Fields:
   - Frequency - the frequency of the given phoneme as an allophone of GlyphID (i.e.,
     count of the given allophone divided by total count for the GlyphID)
 
-=== output/cooccurrence.csv
+### output/cooccurrence.csv
 
 Each row and column are a phoneme found in Phoible inventories, with cells indicating
 co-occurrences counts. The diagonals are thus the absolute count for each phoneme, that
 can be used for calculating relative frequencies. 
 
-=== output/inventories.csv
+### output/inventories.csv
 
 Fields:
   - InventoryID: the unique ID for the phonemic inventory
@@ -49,7 +49,7 @@ Fields:
   - Allophones: list of all allophones of the current glyph id for the current
     inventory, separated by vertical bars; the firts item is a copy of field 'Phoneme'
 
-=== output/languages.csv
+### output/languages.csv
 
 Fields:
   - InventoryID: the unique ID for the phonemic inventory
@@ -76,7 +76,7 @@ Fields:
     inventory database in code
   - Notes: notes on the language/inventory, if any
 
-=== output/phonemes.csv
+### output/phonemes.csv
 
 Fields:
   - GlyphID
