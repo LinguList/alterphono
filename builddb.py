@@ -319,13 +319,13 @@ def write_distance_matrix(d_matrix):
     columns = [c for c in sorted(d_matrix['t']) if c != 'GlyphID']
     
     # output header
-    header = ','.join(['phoneme'] + columns) + '\n'
+    header = ','.join(['Phoneme'] + columns) + '\n'
     handler.write(header.encode('utf-8'))
     
     # output each phoneme
     for phoneme in sorted(d_matrix):
         values = [phoneme] + [str(d_matrix[phoneme][c]) for c in columns]
-        line = ', '.join(values) + '\n'
+        line = ','.join(values) + '\n'
         handler.write(line.encode('utf-8'))
         
     handler.close()
