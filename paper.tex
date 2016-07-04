@@ -1,0 +1,43 @@
+acoustic and articulary models
+
+We propose a new method for phoneme ("segment") distance.
+
+Distance is historically calculated with X methods:
+
+- ad-hoc values, established by researchers based on personal experience
+- models that quantify phoneme descriptions is some way, for example by calculating an
+euclidian distance for vowels in the vowel trapezium
+- measures derived from acoustic properties, usually combined with some frequrency
+information for balancing (such as in Mielke)
+- measures based in the distribution of phonemes, and eventually allophones, in a single
+language or across language inventories
+
+when considering phoneme properties, there are X ways of considering them:
+- not considering them at all, i.e., considering each phoneme as purely independent and
+as equally distant from every other single phoneme
+- considering the similarities using the more common descriptions, as used in IPA,
+mostly based in place and manner of articulation; this can either be considered as dummy
+variables (such that the distance between different properties is equal, like from stop to
+fricative or from stop to affricate) or a metric can be established by the researcher
+(easier for place of articulation, as it can more easily be described as a continous
+variable)
+- considering distinctive features, which are usually binary but can likely also be set
+to zero (which can be considered as a zero, a distinct value, or defaulting to minus);
+it is however important to remember that this can affect the consideration of sequences,
+such as diphtong, because sometimes some values are duplicated or triplicated
+
+we decided to base our metric in the global distribution of segments across language
+inventories and allophones for a given phoneme; in particular, we assume that:
+
+- accept that phonemic systems tend do balance between maximal perceptual distinctiveness
+and minimal speaker effort /JanWillemVanLeussenMA2009.pdf
+- the more two phonemes are co-occur across inventories, the more different they are
+- the more two phonemes co-occur as allophones across languages, the more similar
+they are
+- the distance between a phoneme and itself should always be zero
+- a single system should consider all segments found in languages, including vowels,
+consonants, diphtongs, etc.
+- similar phonemes co-occurr: this is given by the tendency for each voiceless consonant to
+have its voiced counterpart, for example, or for a vowel to have rounded/unrounded; it
+also considers that it is unlikely for a language to have a single phoneme for a given place
+or manner of articulation (for example, only one bilabial consonant, or only one high vowel)

@@ -60,18 +60,13 @@ def read_langinfo():
     
     return data
     
-def run():
-    """
-    Reads the 'phoible-by-phoneme' database line by line, parsing and aggregating data.
-    """
-
+def read_phoible_by_phoneme():
     # variables for collecting the data that is structured into an output
     # at the end
     lang_data = read_langinfo()
     inv_data = []
     phon_data = {}
     allophone_data = {}
-    cooccurence_data = {}
     
     # auxiliary variables
     phon_count = {}
@@ -151,24 +146,10 @@ def run():
     for glyph_id in phon_count:
         phon_data[glyph_id]['Count'] = phon_count[glyph_id]
 
-    # compute the phoneme co-occurance matrix (phoneme by phoneme)
-    for inventory_id in lang_data:
-        for phoneme1 in lang_data[inventory_id]['_phonemes']:
-            # add to rows if needed
-            if phoneme1 not in cooccurence_data:
-                cooccurence_data[phoneme1] = {}
-                
-            # add columns; the diagonals will hold the global count
-            for phoneme2 in lang_data[inventory_id]['_phonemes']:
-                # add to columns if needed
-                if phoneme2 not in cooccurence_data[phoneme1]:
-                    cooccurence_data[phoneme1][phoneme2] = 1
-                else:
-                    cooccurence_data[phoneme1][phoneme2] += 1
-    
-    # ## OUTPUTS ############################################
-
-    # lang data
+    # return
+    return lang_data, inv_data, phon_data, allophone_data
+        
+def write_lang_data(lang_data):
     handler = file('output/languages.csv', 'w')
     header = ['InventoryID', 'LanguageCode', 'LanguageName', 'Glottocode',
         'GlottologName', 'LanguageFamilyRoot', 'LanguageFamilyGenus', 'SpecificDialect',
@@ -224,8 +205,8 @@ def run():
             notes_str])
     
         handler.write(buf.encode('utf-8') + '\n')
-        
-    # inv data - output in order (somewhat)
+
+def write_inv_data(inv_data, lang_data):
     handler = file('output/inventories.csv', 'w')
     header = ['InventoryID', 'Glottocode', 'GlyphID', 'Phoneme', 'Allophones']
     handler.write(','.join(header) + '\n')
@@ -259,7 +240,7 @@ def run():
             
     handler.close()
 
-    # phoneme data
+def write_phoneme_data(phon_data):
     features = sorted(phon_data['2C71']['Features'].keys())
     
     handler = file('output/phonemes.csv', 'w')
@@ -287,7 +268,7 @@ def run():
         
     handler.close()
 
-    # allophone data
+def write_allophone_data(allophone_data):
     handler = file('output/allophones.csv', 'w')
     header = ['GlyphID', 'Allophone', 'Count', 'Frequency']
     handler.write(','.join(header) + '\n')
@@ -307,26 +288,179 @@ def run():
             handler.write(buf.encode('utf-8') + '\n')
             
     handler.close()
-    
-    # cooccurence
-    phonemes = sorted(cooccurence_data)
+
+def write_cooccurrence_data(cooccurrence_data):
+    phonemes = sorted(cooccurrence_data)
     
     handler = file('output/cooccurrence.csv', 'w')
     header = ['Phoneme', ','.join(phonemes)]
     handler.write(','.join(header).encode('utf-8') + '\n')
-    
+
+    phon_count = {}
     for phoneme1 in phonemes:
+        phon_count[phoneme1] = float(cooccurrence_data[phoneme1][phoneme1])
+    
         counts = []
         for phoneme2 in phonemes:
-            if phoneme2 not in cooccurence_data[phoneme1]:
+            if phoneme2 not in cooccurrence_data[phoneme1]:
                 counts.append(0)
             else:
-                counts.append(cooccurence_data[phoneme1][phoneme2])
+                counts.append(cooccurrence_data[phoneme1][phoneme2])
                 
         buf = '%s,%s' % (phoneme1, ','.join([str(c) for c in counts]))
         handler.write(buf.encode('utf-8') + '\n')
     
     handler.close()
+    
+def write_distance_matrix(d_matrix):
+    handler = file('output/distance_matrix.csv', 'w')
+
+    # extract columns
+    columns = [c for c in sorted(d_matrix['t']) if c != 'GlyphID']
+    
+    # output header
+    header = ','.join(['phoneme'] + columns) + '\n'
+    handler.write(header.encode('utf-8'))
+    
+    # output each phoneme
+    for phoneme in sorted(d_matrix):
+        values = [phoneme] + [str(d_matrix[phoneme][c]) for c in columns]
+        line = ', '.join(values) + '\n'
+        handler.write(line.encode('utf-8'))
         
+    handler.close()
+
+def compute_cooccurrence(lang_data):
+    cooccurrence_data = {}
+
+    # compute the phoneme co-occurance matrix (phoneme by phoneme)
+    for inventory_id in lang_data:
+        for phoneme1 in lang_data[inventory_id]['_phonemes']:
+            # add to rows if needed
+            if phoneme1 not in cooccurrence_data:
+                cooccurrence_data[phoneme1] = {}
+                
+            # add columns; the diagonals will hold the global count
+            for phoneme2 in lang_data[inventory_id]['_phonemes']:
+                # add to columns if needed
+                if phoneme2 not in cooccurrence_data[phoneme1]:
+                    cooccurrence_data[phoneme1][phoneme2] = 1
+                else:
+                    cooccurrence_data[phoneme1][phoneme2] += 1
+                    
+    return cooccurrence_data
+
+def collect_dmatrix(phon_data, allophone_data, cooccurrence_data):
+    d_matrix = {}
+    
+    # initialize matrix, specifying the glyphid, count, cooccurrences
+    for entry in allophone_data:
+        # copied info
+        phoneme = phon_data[entry]['Phoneme']
+        count = phon_data[entry]['Count']
+        
+        # initialize matrix
+        d_matrix[phoneme] = {
+            'GlyphID' : entry,
+            'Count' : count
+        }
+        
+        # add co-occurrences
+        count = count / 100.0 # in percentage and float
+        for cophoneme in cooccurrence_data:
+            if cophoneme not in cooccurrence_data[phoneme]:
+                d_matrix[phoneme]['cophoneme_' + cophoneme] = 0.0
+            else:
+                v = cooccurrence_data[phoneme][cophoneme] / count
+                d_matrix[phoneme]['cophoneme_' + cophoneme] = v
+
+    # collect a set of all allophones in the database (so we can generate the columns),
+    # along with the allophone count for each phoneme
+    set_allophones = set()
+    for phoneme in d_matrix:
+        glyphid = d_matrix[phoneme]['GlyphID']
+                
+        # sum allophones and collect set
+        allophone_count = 0
+        for allophone in allophone_data[glyphid]:
+            allophone_count += allophone_data[glyphid][allophone]
+            set_allophones.add(allophone)
+            
+        # add allophone count and variablity
+        d_matrix[phoneme]['Allophone_count'] = allophone_count
+        d_matrix[phoneme]['Allophone_variability'] = \
+            len(allophone_data[glyphid]) / float(allophone_count)
+
+    # with set of allophones and individual allophone counts collected, add allophones
+    for phoneme in d_matrix:
+        glyphid = d_matrix[phoneme]['GlyphID']
+        a_count = d_matrix[phoneme]['Allophone_count'] / 100.0
+        
+        for allophone in sorted(set_allophones):
+            if allophone not in allophone_data[glyphid]:
+                a_score = 0.0
+            else:
+                a_score = allophone_data[glyphid][allophone] / a_count
+                
+            d_matrix[phoneme]['allophone_' + allophone] = a_score
+       
+    # for each phoneme in the distance matrix, append the distinctive features
+    # from the database
+    features = ['advancedTongueRoot', 'anterior', 'approximant', 'back', 'click',
+        'consonantal', 'constrictedGlottis', 'continuant', 'coronal', 'delayedRelease',
+        'distributed', 'dorsal', 'epilaryngealSource', 'fortis', 'front', 'high',
+        'labial', 'labiodental', 'lateral', 'long', 'low', 'loweredLarynxImplosive',
+        'nasal', 'periodicGlottalSource', 'raisedLarynxEjective', 'retractedTongueRoot',
+        'round', 'short', 'sonorant', 'spreadGlottis', 'stress', 'strident', 'syllabic',
+        'tap', 'tense', 'tone', 'trill']
+    f_scope = {key: set() for key in features}
+    
+    # collect all possible values for all features in the database, so we can later
+    # apply a multilevel modelling
+    for phoneme in d_matrix:
+        # features - to be treated as strings, change to factor?
+        phoneme_features = phon_data[d_matrix[phoneme]['GlyphID']]['Features']
+       
+        for feature in features:
+            f_scope[feature].add(phoneme_features[feature])
+            
+    for phoneme in d_matrix:
+        phoneme_features = phon_data[d_matrix[phoneme]['GlyphID']]['Features']
+        
+        for feature in features:
+            for f_value in sorted(f_scope[feature]):
+                # skip NA
+                if f_value == 'NA':
+                    continue
+                    
+                # add value to the matrix
+                key = 'feature_%s_%s' % (feature, f_value.replace(',', ''))
+                d_matrix[phoneme][key] = int(phoneme_features[feature] == f_value)
+                
+    return d_matrix
+    
+def run():
+    lang_data, inv_data, phon_data, allophone_data = read_phoible_by_phoneme()
+    cooccurrence_data = compute_cooccurrence(lang_data)
+    d_matrix = collect_dmatrix(phon_data, allophone_data, cooccurrence_data)
+    
+    # export lang_data
+    write_lang_data(lang_data)
+    
+    # export inv_data
+    write_inv_data(inv_data, lang_data)
+    
+    # export phoneme_data
+    write_phoneme_data(phon_data)
+    
+    # export allophone_data
+    write_allophone_data(allophone_data)
+    
+    # export cooccurrence_data
+    write_cooccurrence_data(cooccurrence_data)
+
+    # export distance matrix
+    write_distance_matrix(d_matrix)
+    
 if __name__ == '__main__':
     run()
