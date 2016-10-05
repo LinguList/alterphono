@@ -1,6 +1,26 @@
 Alterphono
 ==========
 
+## tl;dr
+
+This project offers a (ultimately arbitrary) model for dimensionless distances between phonemes, available in files `minset.csv` (the most common phonemes) and `fullset.csv` (all phonemes in PHOIBLE). More info is available in the draft paper in this repository and on ArXiV, but, in short, the matrix looks something like this:
+
+|   |   /a/  |  /i /  |  /j/   |    /k/ | /m/    |    /n/ |    /p/ |   /s/  |    /u/ | /w/    |
+|:--|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|-------:|
+| /a/ | 0.00 |      |      |      |      |      |      |      |      |      |
+| /i/ | 0.29 | 0.00 |      |      |      |      |      |      |      |      |
+| /j/ | 0.27 | 0.01 | 0.00 |      |      |      |      |      |      |      |
+| /k/ | 0.38 | 0.31 | 0.32 | 0.00 |      |      |      |      |      |      |
+| /m/ | 0.25 | 0.25 | 0.23 | 0.41 | 0.00 |      |      |      |      |      |
+| /n/ | 0.25 | 0.25 | 0.20 | 0.43 | 0.12 | 0.00 |      |      |      |      |
+| /p/ | 0.37 | 0.29 | 0.35 | 0.11 | 0.41 | 0.45 | 0.00 |      |      |      |
+| /s/ | 0.89 | 0.77 | 0.80 | 0.64 | 0.99 | 0.99 | 0.69 | 0.00 |      |      |
+| /u/ | 0.21 | 0.19 | 0.22 | 0.32 | 0.23 | 0.26 | 0.31 | 0.94 | 0.00 |      |
+| /w/ | 0.24 | 0.22 | 0.22 | 0.34 | 0.19 | 0.24 | 0.29 | 0.97 | 0.01 | 0.00 |
+
+
+## General info
+
 This is a work in progress. You are probably here for the CSV files that compile information
 from the Phoible database. The files are in the output directory, and are:
 
